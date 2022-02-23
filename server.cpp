@@ -115,7 +115,7 @@ void* threadFunction(void* args)
 	char buffer[256];
 	bzero(buffer, 256);
 
-	// new functionality here-------------------------------------------------------------------
+	//sending leaderboard size to client
 	string ssize = to_string(LEADERBOARD_SIZE);
 	char const* reallb = ssize.c_str();
 	for (long unsigned int i = 0; i < strlen(reallb); i++)

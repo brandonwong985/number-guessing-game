@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
 		error("ERROR connecting");
 	}
 
-	// new functionality here-------------------------------------------------------------------
+	//receiving leaderboard size from server
 	bzero(buffer, 256);
 	n = read(sockfd, buffer, 255);
 	if (n < 0)
@@ -81,7 +81,6 @@ int main(int argc, char* argv[])
 		if (buffer[i] != '\n') lb += buffer[i];
 	}
 	int leaderboardsize = stoi(lb);
-	cout << "ledaboard size is: " << leaderboardsize << endl;
 	bzero(buffer, 256);
 
 	printf("\nWelcome to Number Guessing Game! \n");
